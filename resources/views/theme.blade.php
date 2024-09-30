@@ -87,7 +87,7 @@
     <!-- Stage -->
     <section class="py-12 bg-gray-100 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto">
-            <div class="text-center text-3xl font-medium mb-6">
+            <div class="text-center text-3xl text-gray-900 font-medium mb-6">
                 Sistem Nasıl Çalışır?
             </div>
             <div class="block">
@@ -115,7 +115,7 @@
 
                 <div class="w-full md:w-1/2 pe-4 sm:pe-0" data-aos="fade-right">
                     <div class="max-w-2xl mx-auto">
-                        <div class="text-3xl font-medium mb-6 text-gray-800">
+                        <div class="text-3xl font-medium mb-6 text-gray-900">
                             Sıkça Sorulan Sorular
                         </div>
                         <div class="text-justify">
@@ -154,7 +154,7 @@
                     <div class="max-w-2xl mx-auto">
                         <!-- Accordion Item 1 -->
                         <div class="border-b">
-                            <button class="w-full text-left py-4 focus:outline-none font-semibold text-lg flex justify-between items-center"
+                            <button class="w-full text-left py-4 focus:outline-none font-semibold text-lg flex justify-between items-center text-gray-900"
                                     onclick="toggleAccordion('accordion-1')">
                                 Soru 1: Trafik Danışmanlık Hizmetleri nelerdir?
                                 <span class="ml-2">+</span>
@@ -168,7 +168,7 @@
 
                         <!-- Accordion Item 2 -->
                         <div class="border-b">
-                            <button class="w-full text-left py-4 focus:outline-none font-semibold text-lg flex justify-between items-center"
+                            <button class="w-full text-left py-4 focus:outline-none font-semibold text-lg flex justify-between items-center text-gray-900"
                                     onclick="toggleAccordion('accordion-2')">
                                 Soru 2: Trafik güvenliği neden önemlidir?
                                 <span class="ml-2">+</span>
@@ -182,7 +182,7 @@
 
                         <!-- Accordion Item 3 -->
                         <div class="border-b">
-                            <button class="w-full text-left py-4 focus:outline-none font-semibold text-lg flex justify-between items-center"
+                            <button class="w-full text-left py-4 focus:outline-none font-semibold text-lg flex justify-between items-center text-gray-900"
                                     onclick="toggleAccordion('accordion-3')">
                                 Soru 3: Trafik planlaması nasıl yapılır?
                                 <span class="ml-2">+</span>
