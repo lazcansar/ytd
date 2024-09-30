@@ -35,3 +35,10 @@ footer::after {
 .accordion-content.open {
     max-height: 500px; /* İçeriğin açılacağı maksimum yükseklik, tahmini olarak ayarlanabilir */
 }
+#animatedText {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    white-space: pre-wrap;
+    text-transform: capitalize;
+}
