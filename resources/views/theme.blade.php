@@ -93,6 +93,38 @@
             <div class="block">
                 Trafik kazası yahut trafik cezasına ilişkin rapor tanzim edilebilmesi için sisteme üye olmanız gereklidir. Üyelik işlemlerini tamamlamanızın akabinde ilk olarak tutanaklar sistemimize yüklenir. Daha sonra tarafımızca tutanaklar üzerinde gerekli inceleme işlemleri gerçekleştirilir. Devamında tarafınız ile iletişime geçilerek bilgilendirme yapılır. Rapor düzenleme ve rapor gönderim işlemleri ile süreç tamamlanır.
             </div>
+            <!-- Stage Icons -->
+            <div class="flex flex-wrap justify-between items-center mt-6">
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 font-regular text-center mb-3">
+                    <i class="bi bi-person-add text-4xl text-orange-600 block"></i>
+                    <span class="block">Kayıt Ol</span>
+                    <span class="block font-light text-sm">Hemen hesap oluşturun!</span>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 font-regular text-center mb-3">
+                    <i class="bi bi-cloud-upload text-4xl text-orange-600 block"></i>
+                    <span class="block">Tutanak Yükle</span>
+                    <span class="block font-light text-sm">Ceza & Kaza Tutanağınızı Yükleyin!</span>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 font-regular text-center mb-3">
+                    <i class="bi bi-ui-checks-grid text-4xl text-orange-600 block"></i>
+                    <span class="block">Tutanak İnceleme</span>
+                    <span class="block font-light text-sm">Tutanağınız Tarafımızca İncelensin!</span>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 font-regular text-center mb-3">
+                    <i class="bi bi-info-circle text-4xl text-orange-600 block"></i>
+                    <span class="block">Bilgilendirme</span>
+                    <span class="block font-light text-sm">Süreç Hakkında Bilgilendirilin!</span>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 font-regular text-center mb-3">
+                    <i class="bi bi-receipt text-4xl text-orange-600 block"></i>
+                    <span class="block">Rapor Tanzimi</span>
+                    <span class="block font-light text-sm">Düzenlenen Rapor Tarafınıza İletilsin!</span>
+                </div>
+
+            </div>
+
+
+            <!-- Stage Icons -->
         </div>
 
     </section>
@@ -113,7 +145,7 @@
 
 
 
-                <div class="w-full md:w-1/2 pe-4 sm:pe-0" data-aos="fade-right">
+                <div class="w-full md:w-1/2 sm:pe-4" data-aos="fade-right">
                     <div class="max-w-2xl mx-auto">
                         <div class="text-3xl font-medium mb-6 text-gray-900">
                             Sıkça Sorulan Sorular
@@ -123,19 +155,19 @@
                         </div>
                         <!-- Statics -->
                         <div class="flex flex-wrap justify-between mt-6">
-                            <div class="w-full md:w-1/3 text-center font-regular">
+                            <div class="w-full md:w-1/3 text-center font-regular mb-3">
                                 <span class="block text-xl text-gray-800">
                                     <i class="bi bi-person-fill text-orange-600"></i> 3400+
                                 </span>
                                 <span class="block">Danışan Kişi / Kurum</span>
                             </div>
-                            <div class="w-full md:w-1/3 text-center font-regular">
+                            <div class="w-full md:w-1/3 text-center font-regular mb-3">
                                 <span class="block text-xl text-gray-800">
                                     <i class="bi bi-award-fill text-orange-600"></i> 1800+
                                 </span>
                                 <span class="block">Olumlu Sonuç</span>
                             </div>
-                            <div class="w-full md:w-1/3 text-center font-regular">
+                            <div class="w-full md:w-1/3 text-center font-regular mb-3">
                                 <span class="block text-xl text-gray-800">
                                     <i class="bi bi-envelope-paper-fill text-orange-600"></i> 2000+
                                 </span>
@@ -149,7 +181,7 @@
 
 
 
-                <div class="w-full md:w-1/2 sm:ps-0 ps-4 " data-aos="fade-left">
+                <div class="w-full md:w-1/2 sm:ps-4 " data-aos="fade-left">
                     <!-- Accordion -->
                     <div class="max-w-2xl mx-auto">
                         <!-- Accordion Item 1 -->
