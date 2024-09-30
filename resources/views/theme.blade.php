@@ -21,6 +21,7 @@
     <meta property="og:url" content="" />
     <meta property="og:site_name" content="" />
     <meta property="og:image" content="" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
 </head>
 <body class="bg-gray-50">
@@ -52,7 +53,7 @@
     <section class="py-12">
         <div class="container mx-auto">
             <div class="flex flex-wrap justify-between items-center">
-                <div class="w-full md:w-1/2">
+                <div class="w-full md:w-1/2" data-aos="fade-right">
                     <div class="max-w-2xl mx-auto">
                         <div class="text-3xl font-medium mb-6 text-gray-800">
                             Sıkça Sorulan Sorular
@@ -88,7 +89,7 @@
 
 
 
-                <div class="w-full md:w-1/2">
+                <div class="w-full md:w-1/2" data-aos="fade-left">
                     <!-- Accordion -->
                     <div class="max-w-2xl mx-auto">
                         <!-- Accordion Item 1 -->
@@ -249,6 +250,13 @@
             button.textContent = '-';
         }
     }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000, // Animasyon süresi (ms)
+        once: true      // Sayfa aşağı kaydırıldığında sadece bir kez çalışmasını sağlamak için
+    });
 </script>
 </body>
 </html>
