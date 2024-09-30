@@ -25,11 +25,67 @@
 
 </head>
 <body class="bg-gray-50">
+<header>
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+
+                <!-- Sol Taraf: Firma Logosu -->
+                <div class="flex-shrink-0">
+                    <a href="#">
+                        <img class="h-8 w-8" src="/your-logo.png" alt="Firma Logosu">
+                    </a>
+                </div>
+
+                <!-- Orta Kısım: Menü Linkleri (Büyük Ekranlar İçin) -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Anasayfa</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Hakkımızda</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Hizmetler</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">İletişim</a>
+                </div>
+
+                <!-- Sağ Taraf: İletişime Geç Butonu -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contact" class="text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-md text-sm font-medium">İletişime Geç <i class="bi bi-arrow-right"></i></a>
+                </div>
+
+                <!-- Mobil Menü İkonu -->
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobil Menü -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Anasayfa</a>
+                <a href="#" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Hakkımızda</a>
+                <a href="#" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Hizmetler</a>
+                <a href="#" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 
 
 <main>
     <!-- Stage -->
-    <section class="py-12 bg-gray-100">
+    <section class="py-12 bg-gray-100 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto">
             <div class="text-center text-3xl font-medium mb-6">
                 Sistem Nasıl Çalışır?
@@ -50,10 +106,14 @@
 
 
     <!-- SSS -->
-    <section class="py-12">
+    <section class="py-12 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto">
             <div class="flex flex-wrap justify-between items-center">
-                <div class="w-full md:w-1/2" data-aos="fade-right">
+
+
+
+
+                <div class="w-full md:w-1/2 pe-4 sm:pe-0" data-aos="fade-right">
                     <div class="max-w-2xl mx-auto">
                         <div class="text-3xl font-medium mb-6 text-gray-800">
                             Sıkça Sorulan Sorular
@@ -89,7 +149,7 @@
 
 
 
-                <div class="w-full md:w-1/2" data-aos="fade-left">
+                <div class="w-full md:w-1/2 sm:ps-0 ps-4 " data-aos="fade-left">
                     <!-- Accordion -->
                     <div class="max-w-2xl mx-auto">
                         <!-- Accordion Item 1 -->
@@ -153,7 +213,7 @@
 
 
 <footer>
-    <section class="text-white">
+    <section class="text-white px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto py-12">
             <div class="flex flex-column md:flex-row flex-wrap">
                 <!-- Footer Quick Links -->
