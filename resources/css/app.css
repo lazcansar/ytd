@@ -42,3 +42,8 @@ footer::after {
     white-space: pre-wrap;
     text-transform: capitalize;
 }
+@media only screen and (max-width: 768px) {
+    #animatedText {
+        font-size: 14px;
+    }
+}
