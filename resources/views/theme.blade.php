@@ -42,7 +42,7 @@
                 <!-- Orta Kısım: Menü Linkleri (Büyük Ekranlar İçin) -->
                 <div class="hidden md:flex space-x-8">
                     <a href="{{ route('home') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Anasayfa</a>
-                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Hakkımızda</a>
+                    <a href="{{ route('about') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Hakkımızda</a>
                     <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Hizmetler</a>
                     <a href="{{ route('contact') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">İletişim</a>
                 </div>
