@@ -42,6 +42,12 @@ footer::after {
     white-space: pre-wrap;
     text-transform: capitalize;
 }
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
 @media only screen and (max-width: 768px) {
     #animatedText {
         font-size: 14px;

@@ -42,8 +42,8 @@
                 <!-- Orta Kısım: Menü Linkleri (Büyük Ekranlar İçin) -->
                 <div class="hidden md:flex space-x-8">
                     <a href="{{ route('home') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Anasayfa</a>
-                    <a href="{{ route('about') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Hakkımızda</a>
-                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Hizmetler</a>
+                    <a href="{{ route('about') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Hakkımda</a>
+                    <a href="{{ route('services') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Hizmetlerim</a>
                     <a href="{{ route('contact') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">İletişim</a>
                 </div>
 
@@ -66,10 +66,10 @@
         <!-- Mobil Menü -->
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Anasayfa</a>
-                <a href="#" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Hakkımızda</a>
+                <a href="{{ route('home') }}" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Anasayfa</a>
+                <a href="{{ route('about') }}" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Hakkımda</a>
                 <a href="#" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Hizmetler</a>
-                <a href="#" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">İletişim</a>
+                <a href="{{ route('contact') }}" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">İletişim</a>
             </div>
         </div>
     </nav>
@@ -100,7 +100,7 @@
                     <div>
                         <ul class="text-gray-200">
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Hakkımda</a></li>
-                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Hizmetlerimiz</a></li>
+                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Hizmetlerim</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Kusur Tespiti</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Örnek Kaza Raporları</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Trafik Kazası Danışmanlık</a></li>
