@@ -5,7 +5,7 @@
             <img src="{{ asset('storage/images/contact-bg.jpg') }}" class="w-full">
             <div class="container mx-auto py-3 px-4">
                 <a href="{{ route('home') }}" class="font-regular">Anasayfa</a>
-                <i class="bi bi-chevron-bar-right"></i>
+                <i class="bi bi-chevron-right"></i>
                 <span href="#">İletişim</span>
             </div>
         </section>
@@ -34,6 +34,12 @@
                                         <input class="block w-full my-3 px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" type="tel" name="tel" placeholder="Telefon Numaranız">
                                     </div>
                                     <div class="w-full">
+                                        <select name="subject" class="w-full my-3 px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none bg-white">
+                                            <option selected disabled>Konu Seç</option>
+                                            <option value="">Danışmanlık</option>
+                                        </select>
+                                    </div>
+                                    <div class="w-full">
                                         <textarea class="block w-full my-3 px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" name="message" rows="10" placeholder="Mesajınız"></textarea>
                                     </div>
                                     <div class="w-full text-end">
@@ -52,8 +58,10 @@
                             <div class="text-xl text-gray-900 mb-5">
                                 İletişim Bilgileri
                             </div>
-                            <p class="text-xl bg-white rounded border border-300 px-4 py-6 mb-5"><a href="mailto:yetisbalci@yahoo.com"><i class="bi bi-envelope text-yellow-700 me-3"></i> yetisbalci@yahoo.com</a></p>
-                            <p class="text-xl bg-white rounded border border-300 px-4 py-6"><a href=""><i class="bi bi-whatsapp text-yellow-700 me-3"></i> +90 541 556 20 50</a></p>
+                            <p class="bg-white rounded border border-300 px-4 py-6 mb-5"><a href="mailto:yetisbalci@yahoo.com"><i class="bi bi-envelope text-yellow-700 me-3"></i> yetisbalci@yahoo.com</a></p>
+                            <p class="bg-white rounded border border-300 px-4 py-6 mb-5"><a href=""><i class="bi bi-whatsapp text-yellow-700 me-3"></i> +90 541 556 20 50</a></p>
+                            <p class="bg-white rounded border border-300 px-4 py-6 mb-5"><a href=""><i class="bi bi-facebook text-blue-800 me-3"></i>Yetiş Trafik Danışmanlık</a></p>
+                            <p class="bg-white rounded border border-300 px-4 py-6"><a href=""><i class="bi bi-instagram text-blue-700 me-3"></i>Yetiş Trafik Danışmanlık</a></p>
                         </div>
                     </div>
 
