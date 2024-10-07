@@ -103,7 +103,7 @@
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Hizmetlerim</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Kusur Tespiti</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Örnek Kaza Raporları</a></li>
-                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Trafik Kazası Danışmanlık</a></li>
+                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('crash') }}" class="hover:text-white">Trafik Kazası Danışmanlık</a></li>
                             <li><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Trafik Cezası Danışmanlık</a></li>
                         </ul>
                     </div>
@@ -116,10 +116,10 @@
                     </div>
                     <div>
                         <ul class="text-gray-200">
-                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Araç ve Sigorta Sorgulama</a></li>
-                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">E-Devlet Kapısı</a></li>
-                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Sigorta Bilgi ve Gözetim Merkezi</a></li>
-                            <li><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Facebook Trafik Kaza Danışmanlık Grubu</a></li>
+                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="https://sigortam360.com/" target="_blank" class="hover:text-white">Araç ve Sigorta Sorgulama</a></li>
+                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="https://turkiye.gov.tr/" target="_blank" class="hover:text-white">E-Devlet Kapısı</a></li>
+                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="https://sbm.org.tr/" target="_blank" class="hover:text-white">Sigorta Bilgi ve Gözetim Merkezi</a></li>
+                            <li><i class="bi bi-arrow-right-short"></i> <a href="https://www.facebook.com/yetistrafik/" target="_blank" class="hover:text-white">Facebook Trafik Kaza Danışmanlık Grubu</a></li>
                         </ul>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                         <ul class="text-gray-200">
                             <li class="mb-3"><i class="bi bi-envelope-at-fill"></i> <a href="#" class="hover:text-white">yetisbalci@yahoo.com</a></li>
                             <li class="mb-3"><i class="bi bi-phone-fill"></i> <a href="#" class="hover:text-white">+90 541 556 20 50</a></li>
-                            <li><a href="#" class="me-3 hover:text-white"><i class="bi bi-instagram"></i> Instagram</a> <a href="#" class="hover:text-white"><i class="bi bi-facebook"></i> Facebook</a> </li>
+                            <li><a href="https://www.instagram.com/yetis_trafik_danismanlik/" target="_blank" class="me-3 hover:text-white"><i class="bi bi-instagram"></i> Instagram</a> <a href="https://www.facebook.com/yetistrafik/" target="_blank" class="hover:text-white"><i class="bi bi-facebook"></i> Facebook</a> </li>
                         </ul>
                     </div>
                 </div>

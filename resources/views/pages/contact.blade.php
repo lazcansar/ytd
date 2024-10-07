@@ -36,7 +36,8 @@
                                     <div class="w-full">
                                         <select name="subject" class="w-full my-3 px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none bg-white">
                                             <option selected disabled>Konu Seç</option>
-                                            <option value="">Danışmanlık</option>
+                                            <option value="">Trafik Kazası Danışmanlık</option>
+                                            <option value="">Trafik Cezası Danışmanlık</option>
                                         </select>
                                     </div>
                                     <div class="w-full">
