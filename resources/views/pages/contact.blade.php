@@ -2,7 +2,7 @@
 @section('main')
     <main>
         <section class="bg-gray-100">
-            <img src="{{ asset('storage/images/contact-bg.jpg') }}" class="w-full">
+            <img src="{{ asset('storage/images/sample.jpg') }}" class="w-full">
             <div class="container mx-auto py-3 px-4">
                 <a href="{{ route('home') }}" class="font-regular">Anasayfa</a>
                 <i class="bi bi-chevron-right"></i>
@@ -34,7 +34,7 @@
                                         <input class="block w-full my-3 px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" type="tel" name="tel" placeholder="Telefon Numaranız">
                                     </div>
                                     <div class="w-full">
-                                        <select name="subject" class="w-full my-3 px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none bg-white">
+                                        <select name="subject" class="appearance-none w-full my-3 px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none bg-white">
                                             <option selected disabled>Konu Seç</option>
                                             <option value="">Trafik Kazası Danışmanlık</option>
                                             <option value="">Trafik Cezası Danışmanlık</option>
