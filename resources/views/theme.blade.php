@@ -104,7 +104,7 @@
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Kusur Tespiti</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Örnek Kaza Raporları</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('crash') }}" class="hover:text-white">Trafik Kazası Danışmanlık</a></li>
-                            <li><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Trafik Cezası Danışmanlık</a></li>
+                            <li><i class="bi bi-arrow-right-short"></i> <a href="{{ route('report') }}" class="hover:text-white">Trafik Cezası Danışmanlık</a></li>
                         </ul>
                     </div>
                 </div>
