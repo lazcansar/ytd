@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pages;
+use App\Http\Controllers\CrashController;
 
 
 Route::get('/', [Pages::class, 'homePage'])->name('home');
@@ -10,3 +11,7 @@ Route::get('/hakkimda', [Pages::class, 'aboutPage'])->name('about');
 Route::get('/trafik-kaza-danismanlik-hizmeti', [Pages::class, 'servicesPage'])->name('services');
 Route::get('/trafik-kazasi-danisma', [Pages::class, 'crashPage'])->name('crash');
 Route::get('/ceza-tutanagi-danisma', [Pages::class, 'reportPage'])->name('report');
+
+
+// Upload Files
+Route::post('/trafik-kazasi-upload', [CrashController::class, 'uploadFile'])->name('upload.crash');

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('crashes', function (Blueprint $table) {
             $table->id();
-            $table->longText('files')->nullable();
+            $table->json('images')->nullable();
             $table->text('name')->nullable();
             $table->text('surname')->nullable();
             $table->text('phone')->nullable();
