@@ -36,11 +36,6 @@
 
                         <div class="flex flex-wrap justify-between">
                             <div class="w-full mb-4">
-                                <label for="serino" class="font-regular block">Tutanak Sıra No</label>
-                                <input id="serino" name="serino" class="appearance-none w-full px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" type="text"  value="#6546" disabled>
-                            </div>
-
-                            <div class="w-full mb-4">
                                 <span class="font-regular block">Tutanak Yükle</span>
                                 <span class="block text-sm mb-2 text-gray-500">* Yalnızca Jpg, Png ve Gif dosya formatları yüklenebilir. Dosya boyutu 5MB sınırını geçemez.</span>
                                 <label for="multipleImage" class="font-regular block bg-white border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none px-4 py-2"><i class="bi bi-search"></i> Dosyaları Seçin</label>
