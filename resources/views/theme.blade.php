@@ -99,8 +99,8 @@
                     </div>
                     <div>
                         <ul class="text-gray-200">
-                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Hakkımda</a></li>
-                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Hizmetlerim</a></li>
+                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('about') }}" class="hover:text-white">Hakkımda</a></li>
+                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('services')}}" class="hover:text-white">Hizmetlerim</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Kusur Tespiti</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Örnek Kaza Raporları</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('crash') }}" class="hover:text-white">Trafik Kazası Danışmanlık</a></li>
