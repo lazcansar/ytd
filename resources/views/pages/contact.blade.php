@@ -18,8 +18,23 @@
                     <div class="w-full md:w-1/2 sm:pe-2">
 
                         <div class="border p-6 border-gray-200 rounded">
+                            @if ($errors->any())
+                                <div class="bg-amber-900 text-gray-200 p-4">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            @if(session('success'))
+                                <div class="bg-amber-400 text-gray-900 p-4 shadow rounded mb-5 ">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
                             <div class="text-xl text-gray-900">İletişim Formu</div>
-                            <form action="" method="POST">
+                            <form action="{{ route('contact.form') }}" method="POST">
+                                @csrf
                                 <div class="flex flex-wrap justify-between">
                                     <div class="w-full sm:w-1/2 sm:pe-2">
                                         <input class="w-full my-3 px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" type="text" name="name" placeholder="Adınız">
@@ -31,13 +46,13 @@
                                         <input class="w-full my-3 px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" type="email" name="email" placeholder="E-Posta Adresiniz">
                                     </div>
                                     <div class="w-full sm:w-1/2 sm:ps-2">
-                                        <input class="block w-full my-3 px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" type="tel" name="tel" placeholder="Telefon Numaranız">
+                                        <input class="block w-full my-3 px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" type="tel" name="phone" placeholder="Telefon Numaranız">
                                     </div>
                                     <div class="w-full">
                                         <select name="subject" class="appearance-none w-full my-3 px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none bg-white">
                                             <option selected disabled>Konu Seç</option>
-                                            <option value="">Trafik Kazası Danışmanlık</option>
-                                            <option value="">Trafik Cezası Danışmanlık</option>
+                                            <option value="1">Trafik Kazası Danışmanlık</option>
+                                            <option value="2">Trafik Cezası Danışmanlık</option>
                                         </select>
                                     </div>
                                     <div class="w-full">
