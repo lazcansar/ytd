@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pages;
 use App\Http\Controllers\CrashController;
+use App\Http\Controllers\ReportController;
 
 
 Route::get('/', [Pages::class, 'homePage'])->name('home');
@@ -15,3 +16,4 @@ Route::get('/ceza-tutanagi-danisma', [Pages::class, 'reportPage'])->name('report
 
 // Upload Files
 Route::post('/trafik-kazasi-upload', [CrashController::class, 'uploadFile'])->name('upload.crash');
+Route::post('/trafik-cezasi-upload', [ReportController::class, 'uploadReport'])->name('upload.report');

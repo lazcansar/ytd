@@ -28,25 +28,46 @@
             <hr class="my-10">
 
             <div class="container mx-auto" data-aos="fade-left">
+
+                @if ($errors->any())
+                    <div class="bg-amber-900 text-gray-200 p-4">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                @if(session('success'))
+                    <div class="bg-amber-400 text-gray-900 p-4 shadow rounded mb-5 ">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
                 <h2 class="text-2xl text-blue-900 font-medium mb-5">
                     Trafik Ceza Tutanağı Gönderin
                 </h2>
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="{{ route('upload.report') }}" method="post" enctype="multipart/form-data">
                     @csrf
 
                     <div class="flex flex-wrap justify-between">
-                        <div class="w-full mb-4">
-                            <label for="serino" class="font-regular block">Tutanak Sıra No</label>
-                            <input id="serino" name="serino" class="appearance-none w-full px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" type="text"  value="#6546" disabled>
-                        </div>
 
                         <div class="w-full mb-4">
                             <span class="font-regular block">Tutanak Yükle</span>
                             <span class="block text-sm mb-2 text-gray-500">* Yalnızca Jpg, Png ve Gif dosya formatları yüklenebilir. Dosya boyutu 5MB sınırını geçemez.</span>
                             <label for="multipleImage" class="font-regular block bg-white border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none px-4 py-2"><i class="bi bi-search"></i> Dosyaları Seçin</label>
-                            <input type="file" name="images[]" class="hidden" id="multipleImage" multiple>
+                            <input type="file" name="images[]" class="hidden" id="multipleImage" multiple onchange="checkFiles(this)" accept="image/jpeg, image/png, image/gif, image/jpg">
                             <span id="listFile"></span>
                         </div>
+
+                        <script>
+                            function checkFiles(input) {
+                                if (input.files.length > 5) {
+                                    alert("En fazla 5 dosya seçebilirsiniz.");
+                                    input.value = ""; // Dosya seçim kutusunu sıfırlar
+                                }
+                            }
+                        </script>
 
                         <div class="w-full sm:w-1/2 mb-4 sm:pe-2">
                             <label for="name" class="font-regular block">İsim</label>
@@ -55,7 +76,7 @@
 
                         <div class="w-full sm:w-1/2 mb-4 sm:ps-2">
                             <label for="surname" class="font-regular block">Soyad</label>
-                            <input type="text" id="surname" name="name" class="w-full px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" placeholder="Soyad">
+                            <input type="text" id="surname" name="surname" class="w-full px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" placeholder="Soyad">
                         </div>
 
                         <div class="w-full sm:w-1/2 mb-4 sm:pe-2">
@@ -65,20 +86,15 @@
 
                         <div class="w-full sm:w-1/2 mb-4 sm:ps-2">
                             <label for="email" class="font-regular block">E-Posta</label>
-                            <input type="email" id="email" name="name" class="w-full px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" placeholder="E-Posta">
-                        </div>
-
-                        <div class="w-full mb-4">
-                            <label for="history" class="font-regular block">Kaza Tarihi ve Saati</label>
-                            <input type="text" id="history" name="history" class="w-full px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" placeholder="01.01.2024 - 15:30">
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none" placeholder="E-Posta">
                         </div>
 
                         <div class="w-full mb-4">
                             <label for="take" class="font-regular block">İletişim Tercihi</label>
                             <div class="relative grid">
-                                <select name="take" id="take" class="cursor-context-menu appearance-none px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none bg-white row-start-1 col-start-1 ">
-                                    <option value="">Telefon ile iletişime geçilsin</option>
-                                    <option value="">E-Posta ile iletişime geçilsin</option>
+                                <select name="contactType" id="take" class="cursor-context-menu appearance-none px-4 py-2 border-gray-300 border rounded ring-0 focus:ring-0 focus:outline-none bg-white row-start-1 col-start-1 ">
+                                    <option value="phone">Telefon ile iletişime geçilsin</option>
+                                    <option value="email">E-Posta ile iletişime geçilsin</option>
                                 </select>
                                 <i class="pointer-events-none bi bi-arrow-down-short row-start-1 col-start-1 absolute right-3 top-1/2 transform -translate-y-1/2"></i>
                             </div>
@@ -90,20 +106,8 @@
                         </div>
 
                         <div class="w-full mb-4">
-                            <label for="information" class="font-regular flex items-center">
-                                <input type="radio" name="information" id="information" class="me-2">
-                                Sadece Bilgilendirme İstiyorum
-                            </label>
-
-                            <label for="report" class="font-regular flex items-center">
-                                <input type="radio" name="information" id="report" class="me-2">
-                                Bilgilendirme ve Rapor İstiyorum
-                            </label>
-                        </div>
-
-                        <div class="w-full mb-4">
                             <label for="approve" class="font-regular flex items-center">
-                                <input type="checkbox" name="approve" id="approve" class="me-2">
+                                <input type="checkbox" name="confirmTerm" id="approve" class="me-2" value="1">
                                 <a href="#" class="text-blue-600 me-1 hover:underline">Kullanım Şartlarını</a> okudum, onaylıyorum.
                             </label>
                         </div>
