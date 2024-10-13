@@ -2,7 +2,7 @@
 @section('main')
     <main>
         <section class="bg-gray-100">
-            <img src="{{ asset('storage/images/trafik-kazasi-danismanlik-hizmeti.jpg') }}" class="w-full">
+            <img src="{{ asset('storage/images/trafik-kazasi-danismanlik-firmasi.jpg') }}" class="w-full">
             <div class="container mx-auto py-3 px-4">
                 <a href="{{ route('home') }}" class="font-regular">Anasayfa</a>
                 <i class="bi bi-chevron-right"></i>
@@ -55,7 +55,7 @@
                                     event.preventDefault();
 
                                     // Remove active class from all tabs and content
-                                    tabs.forEach(t => t.classList.remove('active', 'bg-amber-600', 'text-white'));
+                                    tabs.forEach(t => t.classList.remove('active', 'bg-gray-100', 'bg-amber-600', 'text-white'));
                                     tabContents.forEach(content => content.classList.remove('active'));
 
                                     // Add active class to the clicked tab

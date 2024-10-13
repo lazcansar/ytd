@@ -2,7 +2,7 @@
 @section('main')
     <main>
         <section class="bg-gray-100">
-            <img src="{{ asset('storage/images/sample.jpg') }}" class="w-full">
+            <img src="{{ asset('storage/images/trafik-cezasi-danismanlik.jpg') }}" class="w-full">
             <div class="container mx-auto py-3 px-4">
                 <a href="{{ route('home') }}" class="font-regular">Anasayfa</a>
                 <i class="bi bi-chevron-right"></i>
