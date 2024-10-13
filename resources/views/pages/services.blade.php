@@ -4,9 +4,18 @@
         <section class="bg-gray-100">
             <img src="{{ asset('storage/images/trafik-kazasi-danismanlik-firmasi.jpg') }}" class="w-full">
             <div class="container mx-auto py-3 px-4">
-                <a href="{{ route('home') }}" class="font-regular">Anasayfa</a>
-                <i class="bi bi-chevron-right"></i>
-                <span href="#">Trafik Kazası Danışmanlık Hizmeti</span>
+                <nav aria-label="breadcrumb">
+                    <ol class="list-none p-0 inline-flex">
+                        <!-- Breadcrumb (Yol Haritası) için SEO uyumlu yapı -->
+                        <li class="flex items-center">
+                            <a href="{{ route('home') }}" class="font-regular text-gray-900 hover:underline">Anasayfa</a>
+                            <i class="bi bi-chevron-right mx-2"></i>
+                        </li>
+                        <li aria-current="page">
+                            <span class="text-gray-500">Trafik Kazası Danışmanlık Hizmeti</span>
+                        </li>
+                    </ol>
+                </nav>
             </div>
         </section>
 

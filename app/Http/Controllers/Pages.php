@@ -28,4 +28,7 @@ class Pages extends Controller
     public function ticketPage() {
         return view('pages.ticket');
     }
+    public function loginPage() {
+        return view('pages.login');
+    }
 }
