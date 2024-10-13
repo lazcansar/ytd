@@ -49,7 +49,7 @@
 
                 <!-- Sağ Taraf: İletişime Geç Butonu -->
                 <div class="hidden md:flex items-center">
-                    <a href="#contact" class="text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-md text-sm font-medium">İletişime Geç <i class="bi bi-arrow-right"></i></a>
+                    <a href="{{ route('contact') }}" class="text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-md text-sm font-medium">İletişime Geç <i class="bi bi-arrow-right"></i></a>
                 </div>
 
                 <!-- Mobil Menü İkonu -->
@@ -101,8 +101,6 @@
                         <ul class="text-gray-200">
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('about') }}" class="hover:text-white">Hakkımda</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('services')}}" class="hover:text-white">Hizmetlerim</a></li>
-                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Kusur Tespiti</a></li>
-                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="#" class="hover:text-white">Örnek Kaza Raporları</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('crash') }}" class="hover:text-white">Trafik Kazası Danışmanlık</a></li>
                             <li><i class="bi bi-arrow-right-short"></i> <a href="{{ route('report') }}" class="hover:text-white">Trafik Cezası Danışmanlık</a></li>
                         </ul>
@@ -163,6 +161,18 @@
         </div>
 
     </section>
+
+    <div class="fixed left-0 bottom-0">
+        <div class="p-2 bg-amber-600 text-white rounded-tr font-regular bg-opacity-85 transition hover:bg-opacity-100">
+            <a class="block" href="https://api.whatsapp.com/send?phone=905415562050"><i class="bi bi-whatsapp"></i> WhatsApp İletişim</a>
+        </div>
+    </div>
+    <div class="fixed right-0 bottom-0">
+        <div class="p-2 bg-amber-600 text-white rounded-tl font-regular bg-opacity-85 transition hover:bg-opacity-100">
+            <a class="block" href="https://api.whatsapp.com/send?phone=905415562050"><i class="bi bi-phone-vibrate"></i> Hemen Ara</a>
+        </div>
+    </div>
+
 </footer>
 <script>
     function toggleAccordion(id) {

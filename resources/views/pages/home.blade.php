@@ -54,7 +54,7 @@
 
 
     <!-- Stage -->
-    <section class="py-12 bg-gray-100 px-4 sm:px-6 lg:px-8" data-aos="fade-left">
+    <section class="py-12 bg-gray-100 px-4 sm:px-6 lg:px-8" data-aos="fade-right">
         <div class="container mx-auto">
             <div class="text-center text-3xl text-gray-900 font-medium mb-6">
                 Sistem Nasıl Çalışır?
