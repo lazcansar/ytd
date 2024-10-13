@@ -153,9 +153,9 @@
                 </div>
             </div>
 
-            <div class="block font-bold">
-                <a href="https://afyazilim.com" target="_blank class="hover:text-white"">
-                    <i class="bi bi-code-slash text-gray-50"></i> A&F Yazılım ve E-Ticaret Hizmetleri
+            <div class="block">
+                <a href="https://afyazilim.com" target="_blank" class="hover:text-white text-sm">
+                    Tasarım ve Kodlaması <span class="font-medium"><i class="bi bi-code-slash text-gray-50"></i> A&F Yazılım ve E-Ticaret Hizmetleri</span> tarafından yapılmıştır.
                 </a>
             </div>
         </div>
