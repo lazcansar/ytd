@@ -23,8 +23,17 @@
     <section class="py-12 px-4 sm:px-6 lg:px-8" data-aos="fade-right">
         <div class="flex items-center justify-center">
             <div class="w-full max-w-lg border border-gray-200 rounded shadow px-4 py-6">
+                @if ($errors->any())
+                    <div class="bg-amber-900 text-gray-200 p-4 mb-5">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <h1 class="font-regular text-gray-900 text-xl mb-5">Giriş Yap</h1>
-                <form action="" method="post" class="space-y-4">
+                <form action="{{ route('login.user') }}" method="post" class="space-y-4">
                     @csrf
                     <div class="mb-3">
                         <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-Posta</label>

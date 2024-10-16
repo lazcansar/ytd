@@ -102,7 +102,12 @@
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('about') }}" class="hover:text-white">Hakkımda</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('services')}}" class="hover:text-white">Hizmetlerim</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('crash') }}" class="hover:text-white">Trafik Kazası Danışmanlık</a></li>
-                            <li><i class="bi bi-arrow-right-short"></i> <a href="{{ route('report') }}" class="hover:text-white">Trafik Cezası Danışmanlık</a></li>
+                            <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('report') }}" class="hover:text-white">Trafik Cezası Danışmanlık</a></li>
+                            @if(Auth::user())
+                                <li><i class="bi bi-arrow-right-short"></i> <a href="{{ route('logout') }}" class="hover:text-white">Çıkış Yap</a></li>
+                            @else
+                                <li><i class="bi bi-arrow-right-short"></i> <a href="{{ route('login') }}" class="hover:text-white">Giriş Yap</a></li>
+                            @endif
                         </ul>
                     </div>
                 </div>

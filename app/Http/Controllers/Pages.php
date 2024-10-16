@@ -31,4 +31,14 @@ class Pages extends Controller
     public function loginPage() {
         return view('pages.login');
     }
+    public function registerPage() {
+        return view('pages.register');
+    }
+
+    // Admin Pages
+    public function adminPage() {
+        return view('admin.home');
+    }
+
+
 }
