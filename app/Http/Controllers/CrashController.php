@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\Crash;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\FormRequestForCrash;
+use Illuminate\Http\JsonResponse;
 
 class CrashController extends Controller
 {
+
     // Crash Page Upload Form
     public function uploadFile(FormRequestForCrash $request) {
         // File upload
@@ -36,6 +38,22 @@ class CrashController extends Controller
 
         // Upload Success
         return redirect()->back()->with('success', 'Tutanak Sisteme Başarıyla Yüklendi');
-
     }
+    public function crashView($id) {
+        $crashDetail = Crash::whereId($id)->first();
+        return view('admin.crash-view', compact('crashDetail'));
+    }
+    public function crashDelete($id): JsonResponse {
+        $crashDelete = Crash::find($id);
+        if (!$crashDelete) {
+            return response()->json(['success' => false ,'message' => 'Kayıt Bulunamadı.'], 404);
+        }
+        $crashDelete->delete();
+        return response()->json(['success' => true ,'message' => 'Kayıt başarıyla silindi.']);
+    }
+
+
+
+
+
 }

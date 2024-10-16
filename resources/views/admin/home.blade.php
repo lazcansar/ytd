@@ -38,33 +38,60 @@
                                     </tr>
                                     </thead>
                                     <tbody class="text-gray-600 text-sm font-light">
-                                    <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                        <td class="py-3 px-3 text-left">Abdullah GÖKSAL</td>
-                                        <td class="py-3 px-3 text-left">0546 500 70 16</td>
-                                        <td class="py-3 px-3 text-left">abdullahgoksal@outlook.com</td>
-                                        <td class="py-3 px-3 text-left">Rapor ve Bilgi</td>
-                                        <td class="py-3 px-3 text-left"><a href="">Görüntüle</a> <a href="">Sil</a></td>
-                                    </tr>
-                                    <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                        <td class="py-3 px-3 text-left">Abdullah GÖKSAL</td>
-                                        <td class="py-3 px-3 text-left">0546 500 70 16</td>
-                                        <td class="py-3 px-3 text-left">abdullahgoksal@outlook.com</td>
-                                        <td class="py-3 px-3 text-left">Rapor ve Bilgi</td>
-                                        <td class="py-3 px-3 text-left"><a href="">Görüntüle</a> <a href="">Sil</a></td>
-                                    </tr>
-                                    <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                        <td class="py-3 px-3 text-left">Abdullah GÖKSAL</td>
-                                        <td class="py-3 px-3 text-left">0546 500 70 16</td>
-                                        <td class="py-3 px-3 text-left">abdullahgoksal@outlook.com</td>
-                                        <td class="py-3 px-3 text-left">Rapor ve Bilgi</td>
-                                        <td class="py-3 px-3 text-left"><a href="">Görüntüle</a> <a href="">Sil</a></td>
-                                    </tr>
+                                    @if($crashAll)
+                                        @foreach($crashAll as $crash)
+                                            <tr class="border-b border-gray-300 hover:bg-gray-100" data-id="{{ $crash->id }}">
+                                                <td class="py-3 px-3 text-left">{{ $crash->name . ' ' . $crash->surname }}</td>
+                                                <td class="py-3 px-3 text-left">{{ $crash->phone }}</td>
+                                                <td class="py-3 px-3 text-left">{{ $crash->email }}</td>
+                                                <td class="py-3 px-3 text-left">{{ $crash->recontactType }}</td>
+                                                <td class="py-3 px-3 text-left">
+                                                    <a href="{{ route('crash.view', $crash->id) }}" class="mb-1 bg-gray-600 text-white px-2 py-1 hover:bg-gray-500 transition block text-center rounded">Görüntüle</a>
+                                                    <a data-id="{{ $crash->id }}" href="javascript:void(0);" class="bg-amber-900 text-white px-2 py-1 hover:bg-amber-800 transition block text-center rounded delete-btn">Sil</a></td>
+                                            </tr>
+                                        @endforeach
+                                    @endif
                                     </tbody>
                                 </table>
+                                <p id="statusMessage" class="mt-4 text-gray-700"></p>
                             </div>
                     </div>
                 </div>
+                <script>
+                    document.querySelectorAll('.delete-btn').forEach(button => {
+                        button.addEventListener('click', function () {
+                            const crashId = this.getAttribute('data-id');
 
+                            if(!confirm('Bu kaydı silmek istediğinize emin misiniz?')) {
+                                return;
+                            }
+                            fetch(`/admin/crash-delete/${crashId}`, {
+                                method: 'DELETE',
+                                headers: {
+                                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                                    'Content-Type': 'application/json',
+                                }
+                            })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if(data.success) {
+                                        const row = document.querySelector(`tr[data-id="${crashId}"]`);
+                                        if(row) {
+                                            row.remove();
+                                        }
+                                        document.getElementById('statusMessage').textContent = data.message;
+                                    }else {
+                                        alert('Kayıt silinemedi.');
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Hata:', error);
+                                    alert('Bir hata oluştu.');
+                                });
+                        });
+                    });
+
+                </script>
 
                 <div class="w-full md:w-1/2 p-4">
                     <div class="border border-gray-200 shadow rounded">

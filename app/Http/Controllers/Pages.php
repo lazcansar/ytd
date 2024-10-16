@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Crash;
 
 class Pages extends Controller
 {
@@ -37,8 +38,10 @@ class Pages extends Controller
 
     // Admin Pages
     public function adminPage() {
-        return view('admin.home');
+        $crashAll = Crash::all();
+        return view('admin.home', compact('crashAll'));
     }
+
 
 
 }
