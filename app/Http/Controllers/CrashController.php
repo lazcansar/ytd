@@ -40,8 +40,9 @@ class CrashController extends Controller
         return redirect()->back()->with('success', 'Tutanak Sisteme Başarıyla Yüklendi');
     }
     public function crashView($id) {
-        $crashDetail = Crash::whereId($id)->first();
-        return view('admin.crash-view', compact('crashDetail'));
+        $crashDetail = Crash::find($id)->first();
+        $images = json_decode($crashDetail->images);
+        return view('admin.crash-view', compact('crashDetail', 'images'));
     }
     public function crashDelete($id): JsonResponse {
         $crashDelete = Crash::find($id);

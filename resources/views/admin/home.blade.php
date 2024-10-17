@@ -33,7 +33,7 @@
                                         <th class="py-3 px-3 text-left">Ad Soyad</th>
                                         <th class="py-3 px-3 text-left">Telefon</th>
                                         <th class="py-3 px-3 text-left">E-Mail</th>
-                                        <th class="py-3 px-3 text-left">Talep Türü</th>
+                                        <th class="py-3 px-3 text-left">Talep Tarihi</th>
                                         <th class="py-3 px-3 text-left">İşlem</th>
                                     </tr>
                                     </thead>
@@ -44,7 +44,7 @@
                                                 <td class="py-3 px-3 text-left">{{ $crash->name . ' ' . $crash->surname }}</td>
                                                 <td class="py-3 px-3 text-left">{{ $crash->phone }}</td>
                                                 <td class="py-3 px-3 text-left">{{ $crash->email }}</td>
-                                                <td class="py-3 px-3 text-left">{{ $crash->recontactType }}</td>
+                                                <td class="py-3 px-3 text-left">{{ $crash->created_at }}</td>
                                                 <td class="py-3 px-3 text-left">
                                                     <a href="{{ route('crash.view', $crash->id) }}" class="mb-1 bg-gray-600 text-white px-2 py-1 hover:bg-gray-500 transition block text-center rounded">Görüntüle</a>
                                                     <a data-id="{{ $crash->id }}" href="javascript:void(0);" class="bg-amber-900 text-white px-2 py-1 hover:bg-amber-800 transition block text-center rounded delete-btn">Sil</a></td>
