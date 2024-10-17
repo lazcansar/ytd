@@ -104,6 +104,7 @@
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('crash') }}" class="hover:text-white">Trafik Kazası Danışmanlık</a></li>
                             <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('report') }}" class="hover:text-white">Trafik Cezası Danışmanlık</a></li>
                             @if(Auth::user())
+                                <li class="mb-3"><i class="bi bi-arrow-right-short"></i> <a href="{{ route('admin.home') }}" class="hover:text-white">Yönetim Paneli</a></li>
                                 <li><i class="bi bi-arrow-right-short"></i> <a href="{{ route('logout') }}" class="hover:text-white">Çıkış Yap</a></li>
                             @else
                                 <li><i class="bi bi-arrow-right-short"></i> <a href="{{ route('login') }}" class="hover:text-white">Giriş Yap</a></li>
