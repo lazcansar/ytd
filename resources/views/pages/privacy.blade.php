@@ -1,4 +1,6 @@
 @extends('theme')
+@section('title'){{ 'Gizlilik Politikası' }}@endsection
+@section('description'){{ 'Gizlilik Politikası' }}@endsection
 @section('main')
 
     <main>

@@ -1,4 +1,6 @@
 @extends('theme')
+@section('title'){{ 'Trafik Kazası Danışmanlık Hizmetleri' }}@endsection
+@section('description'){{ 'Yetiş trafik kaza danışmanlık hizmetleri ile mağdur olmayın. Trafik kaza danışma, trafik kazası danışmanlık, kaza danışma, kaza danışmanlık şirketleri hizmetlerimiz vardır.' }}@endsection
 @section('main')
 <main>
 
@@ -64,27 +66,22 @@
             </div>
             <!-- Stage Icons -->
             <div class="flex flex-wrap justify-between items-center mt-6">
-                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 font-regular text-center mb-3">
-                    <i class="bi bi-person-add text-4xl text-orange-600 block"></i>
-                    <span class="block">Kayıt Ol</span>
-                    <span class="block font-light text-sm">Hemen hesap oluşturun!</span>
-                </div>
-                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 font-regular text-center mb-3">
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 font-regular text-center mb-3">
                     <i class="bi bi-cloud-upload text-4xl text-orange-600 block"></i>
                     <span class="block">Tutanak Yükle</span>
                     <span class="block font-light text-sm">Ceza & Kaza Tutanağınızı Yükleyin!</span>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 font-regular text-center mb-3">
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 font-regular text-center mb-3">
                     <i class="bi bi-ui-checks-grid text-4xl text-orange-600 block"></i>
                     <span class="block">Tutanak İnceleme</span>
                     <span class="block font-light text-sm">Tutanağınız Tarafımızca İncelensin!</span>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 font-regular text-center mb-3">
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 font-regular text-center mb-3">
                     <i class="bi bi-info-circle text-4xl text-orange-600 block"></i>
                     <span class="block">Bilgilendirme</span>
                     <span class="block font-light text-sm">Süreç Hakkında Bilgilendirilin!</span>
                 </div>
-                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 font-regular text-center mb-3">
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 font-regular text-center mb-3">
                     <i class="bi bi-receipt text-4xl text-orange-600 block"></i>
                     <span class="block">Rapor Tanzimi</span>
                     <span class="block font-light text-sm">Düzenlenen Rapor Tarafınıza İletilsin!</span>
@@ -124,19 +121,19 @@
                         </div>
                         <!-- Statics -->
                         <div class="flex flex-wrap justify-between mt-6">
-                            <div class="w-full md:w-1/3 text-center font-regular mb-3">
+                            <div class="w-full sm:w-1/3 md:w-1/3 text-center font-regular mb-3">
                                 <span class="block text-xl text-gray-800">
                                     <i class="bi bi-person-fill text-orange-600"></i> 3400+
                                 </span>
                                 <span class="block">Danışan Kişi / Kurum</span>
                             </div>
-                            <div class="w-full md:w-1/3 text-center font-regular mb-3">
+                            <div class="w-full sm:w-1/3 md:w-1/3 text-center font-regular mb-3">
                                 <span class="block text-xl text-gray-800">
                                     <i class="bi bi-award-fill text-orange-600"></i> 1800+
                                 </span>
                                 <span class="block">Olumlu Sonuç</span>
                             </div>
-                            <div class="w-full md:w-1/3 text-center font-regular mb-3">
+                            <div class="w-full sm:w-1/3 md:w-1/3 text-center font-regular mb-3">
                                 <span class="block text-xl text-gray-800">
                                     <i class="bi bi-envelope-paper-fill text-orange-600"></i> 2000+
                                 </span>

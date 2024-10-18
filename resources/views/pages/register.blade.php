@@ -1,4 +1,6 @@
 @extends('theme')
+@section('title'){{ 'Kayıt Ol' }}@endsection
+@section('description'){{ 'Kayıt Ol' }}@endsection
 @section('main')
 
     <main>

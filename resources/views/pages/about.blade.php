@@ -1,4 +1,6 @@
 @extends('theme')
+@section('title'){{ 'Hakkımda' }}@endsection
+@section('description'){{ 'Toplam 27 yıllık meslek yaşamımın, yaklaşık 20 yılını Jandarma Trafik Tim Komutanı olarak yürüttüm.' }}@endsection
 @section('main')
     <main>
         <section class="bg-gray-100">

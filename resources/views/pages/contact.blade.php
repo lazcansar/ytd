@@ -1,4 +1,6 @@
 @extends('theme')
+@section('title'){{ 'İletişim' }}@endsection
+@section('description'){{ 'Yetiş Trafik Danışmanlık\'tan trafik kazası danışmanlık ve trafik cezası danışmanlık hizmeti almak için 0541 556 20 50 numaralı WhatsApp hattını kullanabilirsiniz.' }}@endsection
 @section('main')
     <main>
         <section class="bg-gray-100">

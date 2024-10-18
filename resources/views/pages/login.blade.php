@@ -1,4 +1,6 @@
 @extends('theme')
+@section('title'){{ 'Giriş Yap' }}@endsection
+@section('description'){{ 'Giriş Yap...' }}@endsection
 @section('main')
 
 <main>

@@ -1,4 +1,6 @@
 @extends('theme')
+@section('title'){{ 'Kullanım Şartları' }}@endsection
+@section('description'){{ 'Kullanım şartları' }}@endsection
 @section('main')
 
     <main>

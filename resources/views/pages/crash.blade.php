@@ -1,4 +1,6 @@
 @extends('theme')
+@section('title'){{ 'Trafik Kazası Danışma' }}@endsection
+@section('description'){{ 'Yetiş Trafik Danışma, trafik kaza danışmanlık, trafik kaza danışma, trafik kazası danışmanlık, kaza danışma, trafik kaza tutanağı inceleme, trafik kaza tutanağı raporlama' }}@endsection
 @section('main')
     <main>
         <section class="bg-gray-100">

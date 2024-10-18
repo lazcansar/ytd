@@ -1,4 +1,6 @@
 @extends('theme')
+@section('title'){{ 'Trafik Kazası Danışmanlık Hizmeti' }}@endsection
+@section('description'){{ 'Trafik kazası danışmanlık, trafik cezası danışmanlık alanlarında raporlama, kusur tespiti, ceza ve kaza danışmanlığı hizmetleri veriyoruz...' }}@endsection
 @section('main')
     <main>
         <section class="bg-gray-100">

@@ -5,10 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trafik Kazası ve Cezası Danışmanlık - Yetiş Trafik Danışmanlık</title>
-    <meta name="description" content="Yetiş trafik kaza danışmanlık hizmetleri ile mağdur olmayın. Trafik kaza danışma, trafik kazası danışmanlık, kaza danışma, kaza danışmanlık şirketleri hizmetlerimiz vardır.">
+    <title>@yield('title') - Yetiş Trafik Danışmanlık</title>
+    <meta name="description" content="@yield('description')">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="" />
+    <link rel="canonical" href="{{URL::full()}}" />
     @vite('resources/css/app.css')
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="@yield('title')" />
+    <meta property="og:description" content="@yield('description')" />
+    <meta property="og:url" content="{{URL::full()}}" />
+    <meta property="og:site_name" content="Yetiş Trafik Danışmanlık" />
     <meta property="og:image" content="" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -33,7 +33,7 @@
 
                 <!-- Sol Taraf: Firma Logosu -->
                 <div class="flex-shrink-0">
-                    <a href="#">
+                    <a href="{{ route('home') }}">
                         <!-- <img class="h-8 w-8" src="/your-logo.png" alt="Firma Logosu"> -->
                         Yetiş Trafik Danışmanlık
                     </a>
@@ -42,7 +42,8 @@
                 <!-- Orta Kısım: Menü Linkleri (Büyük Ekranlar İçin) -->
                 <div class="hidden md:flex space-x-8">
                     <a href="{{ route('home') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Anasayfa</a>
-                    <a href="{{ route('about') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Hakkımda</a>
+                    <a href="{{ route('crash') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Kaza Girişi</a>
+                    <a href="{{ route('report') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Ceza Girişi</a>
                     <a href="{{ route('services') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">Hizmetlerim</a>
                     <a href="{{ route('contact') }}" class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md font-medium">İletişim</a>
                 </div>
@@ -67,8 +68,9 @@
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="{{ route('home') }}" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Anasayfa</a>
-                <a href="{{ route('about') }}" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Hakkımda</a>
-                <a href="#" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Hizmetler</a>
+                <a href="{{ route('crash') }}" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Kaza Girişi</a>
+                <a href="{{ route('report') }}" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Ceza Girişi</a>
+                <a href="{{ route('services') }}" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Hizmetler</a>
                 <a href="{{ route('contact') }}" class="text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">İletişim</a>
             </div>
         </div>

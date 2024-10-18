@@ -1,4 +1,6 @@
 @extends('theme')
+@section('title'){{ 'Trafik Cezası Danışma' }}@endsection
+@section('description'){{ 'Trafik ceza danışmanlık, trafik ceza itiraz danışmanlık, trafik cezasına itiraz, trafik ceza itirazı nasıl yapılır, trafik cezası itirazı nereye yapılır' }}@endsection
 @section('main')
     <main>
         <section class="bg-gray-100">
