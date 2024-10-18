@@ -23,6 +23,9 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/admin/crash-detail/{id}', [CrashController::class, 'crashView'])->name('crash.view')->middleware('auth');
 Route::DELETE('/admin/crash-delete/{id}', [CrashController::class, 'crashDelete'])->name('crash.delete')->middleware('auth');
 
+Route::get('/admin/report-detail/{id}', [ReportController::class, 'reportView'])->name('report.view')->middleware('auth');
+Route::DELETE('/admin/report-delete/{id}', [ReportController::class, 'reportDelete'])->name('report.delete')->middleware('auth');
+
 
 
 

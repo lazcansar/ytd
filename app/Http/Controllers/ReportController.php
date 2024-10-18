@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\FormRequestForReport;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Report;
+use Illuminate\Http\JsonResponse;
 
 class ReportController extends Controller
 {
@@ -37,13 +38,20 @@ class ReportController extends Controller
         return response()->json(['success' => 'Dosyalar başarıyla yüklendi!'], 200);
     }
 
+    public function reportView($id) {
+        $reportDetail = Report::whereId($id)->first();
+        $images = json_decode($reportDetail->images);
+        return view('admin.report-view', compact('reportDetail', 'images'));
+    }
 
-
-
-
-
-
-
+    public function reportDelete($id): JsonResponse {
+        $reportDelete = Report::find($id);
+        if (!$reportDelete) {
+            return response()->json(['success' => false ,'message' => 'Kayıt Bulunamadı.'], 404);
+        }
+        $reportDelete->delete();
+        return response()->json(['success' => true ,'message' => 'Kayıt başarıyla silindi.']);
+    }
 
 
 

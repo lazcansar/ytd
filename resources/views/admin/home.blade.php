@@ -103,38 +103,66 @@
                                     <th class="py-3 px-3 text-left">Ad Soyad</th>
                                     <th class="py-3 px-3 text-left">Telefon</th>
                                     <th class="py-3 px-3 text-left">E-Mail</th>
-                                    <th class="py-3 px-3 text-left">Talep Türü</th>
+                                    <th class="py-3 px-3 text-left">Talep Tarihi</th>
                                     <th class="py-3 px-3 text-left">İşlem</th>
                                 </tr>
                                 </thead>
                                 <tbody class="text-gray-600 text-sm font-light">
-                                <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                    <td class="py-3 px-3 text-left">Abdullah GÖKSAL</td>
-                                    <td class="py-3 px-3 text-left">0546 500 70 16</td>
-                                    <td class="py-3 px-3 text-left">abdullahgoksal@outlook.com</td>
-                                    <td class="py-3 px-3 text-left">Rapor ve Bilgi</td>
-                                    <td class="py-3 px-3 text-left"><a href="">Görüntüle</a> <a href="">Sil</a></td>
-                                </tr>
-                                <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                    <td class="py-3 px-3 text-left">Abdullah GÖKSAL</td>
-                                    <td class="py-3 px-3 text-left">0546 500 70 16</td>
-                                    <td class="py-3 px-3 text-left">abdullahgoksal@outlook.com</td>
-                                    <td class="py-3 px-3 text-left">Rapor ve Bilgi</td>
-                                    <td class="py-3 px-3 text-left"><a href="">Görüntüle</a> <a href="">Sil</a></td>
-                                </tr>
-                                <tr class="border-b border-gray-300 hover:bg-gray-100">
-                                    <td class="py-3 px-3 text-left">Abdullah GÖKSAL</td>
-                                    <td class="py-3 px-3 text-left">0546 500 70 16</td>
-                                    <td class="py-3 px-3 text-left">abdullahgoksal@outlook.com</td>
-                                    <td class="py-3 px-3 text-left">Rapor ve Bilgi</td>
-                                    <td class="py-3 px-3 text-left"><a href="">Görüntüle</a> <a href="">Sil</a></td>
-                                </tr>
+                                @if($reportAll)
+                                    @foreach($reportAll as $report)
+                                        <tr class="border-b border-gray-300 hover:bg-gray-100" data-id="{{ $report->id }}">
+                                            <td class="py-3 px-3 text-left">{{ $report->name . ' ' . $report->surname }}</td>
+                                            <td class="py-3 px-3 text-left">{{ $report->phone }}</td>
+                                            <td class="py-3 px-3 text-left">{{ $report->email }}</td>
+                                            <td class="py-3 px-3 text-left">{{ $report->created_at }}</td>
+                                            <td class="py-3 px-3 text-left">
+                                                <a href="{{ route('report.view', $report->id) }}" class="mb-1 bg-gray-600 text-white px-2 py-1 hover:bg-gray-500 transition block text-center rounded">Görüntüle</a>
+                                                <a data-id="{{ $report->id }}" href="javascript:void(0);" class="bg-amber-900 text-white px-2 py-1 hover:bg-amber-800 transition block text-center rounded delete-btn-report">Sil</a></td>
+                                        </tr>
+                                    @endforeach
+                                @endif
                                 </tbody>
                             </table>
+                            <p id="statusMessageReport" class="mt-4 bg-orange-900 px-4 py-2 text-white"></p>
                         </div>
                     </div>
                 </div>
 
+                <script>
+                    document.querySelectorAll('.delete-btn-report').forEach(button => {
+                        button.addEventListener('click', function () {
+                            const reportId = this.getAttribute('data-id');
+
+                            if(!confirm('Bu kaydı silmek istediğinize emin misiniz?')) {
+                                return;
+                            }
+                            fetch(`/admin/report-delete/${reportId}`, {
+                                method: 'DELETE',
+                                headers: {
+                                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                                    'Content-Type': 'application/json',
+                                }
+                            })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if(data.success) {
+                                        const row = document.querySelector(`tr[data-id="${reportId}"]`);
+                                        if(row) {
+                                            row.remove();
+                                        }
+                                        document.getElementById('statusMessageReport').textContent = data.message;
+                                    }else {
+                                        alert('Kayıt silinemedi.');
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Hata:', error);
+                                    alert('Bir hata oluştu.');
+                                });
+                        });
+                    });
+
+                </script>
 
 
 
