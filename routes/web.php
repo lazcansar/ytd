@@ -22,7 +22,6 @@ Route::get('/admin/dashboard', [Pages::class, 'adminPage'] )->name('admin.home')
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/admin/crash-detail/{id}', [CrashController::class, 'crashView'])->name('crash.view')->middleware('auth');
 Route::DELETE('/admin/crash-delete/{id}', [CrashController::class, 'crashDelete'])->name('crash.delete')->middleware('auth');
-#Route::get('/yonetim', [Pages::class, 'adminPage'])->name('admin.home');
 
 
 

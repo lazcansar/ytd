@@ -43,7 +43,9 @@ class AuthController extends Controller
             'password' => 'required|string|min:8',
         ]);
 
-        if (Auth::attempt($request->only('email', 'password'))) {
+        $remember = $request->has('remember');
+
+        if (Auth::attempt($request->only('email', 'password'), $remember)) {
             $user = Auth::user();
             if ($user->role == 'admin') {
                 return redirect()->route('admin.home');

@@ -53,7 +53,7 @@
                                     @endif
                                     </tbody>
                                 </table>
-                                <p id="statusMessage" class="mt-4 text-gray-700"></p>
+                                <p id="statusMessage" class="mt-4 bg-orange-900 px-4 py-2 text-white"></p>
                             </div>
                     </div>
                 </div>

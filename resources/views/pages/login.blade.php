@@ -47,7 +47,7 @@
                     <div class="flex items-center justify-between mb-3">
                         <div>
                             <label class="inline-flex items-center">
-                                <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
+                                <input type="checkbox" name="remember" class="form-checkbox h-4 w-4 text-blue-600">
                                 <span class="ml-2 text-sm text-gray-700">Beni Hatırla</span>
                             </label>
                         </div>

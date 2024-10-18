@@ -37,10 +37,11 @@ class CrashController extends Controller
         ]);
 
         // Upload Success
-        return redirect()->back()->with('success', 'Tutanak Sisteme Başarıyla Yüklendi');
+        #return redirect()->back()->with('success', 'Tutanak Sisteme Başarıyla Yüklendi');
+        return response()->json(['success' => 'Dosyalar başarıyla yüklendi!'], 200);
     }
     public function crashView($id) {
-        $crashDetail = Crash::find($id)->first();
+        $crashDetail = Crash::whereId($id)->first();
         $images = json_decode($crashDetail->images);
         return view('admin.crash-view', compact('crashDetail', 'images'));
     }

@@ -33,8 +33,8 @@ class ReportController extends Controller
         ]);
 
         // Upload Success
-        return redirect()->back()->with('success', 'Tutanak Sisteme Başarıyla Yüklendi');
-
+        #return redirect()->back()->with('success', 'Tutanak Sisteme Başarıyla Yüklendi');
+        return response()->json(['success' => 'Dosyalar başarıyla yüklendi!'], 200);
     }
 
 

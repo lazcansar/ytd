@@ -58,7 +58,7 @@
                 <h2 class="text-2xl text-blue-900 font-medium mb-5">
                     Kaza Tespit Tutanağı Gönderin
                 </h2>
-                    <form action="{{ route('upload.crash') }}" method="post" enctype="multipart/form-data">
+                    <form id="uploadForm">
                         @csrf
 
                         <div class="flex flex-wrap justify-between">
@@ -145,7 +145,7 @@
                         </div>
 
                         <!-- Progress Bar -->
-                        <div id="progressBarContainer" class="w-full bg-gray-200 rounded-lg h-4 mb-4" style="display: none;">
+                        <div id="progressBarContainer" class="w-full bg-gray-200 rounded-lg mt-4 h-4 mb-4" style="display: none;">
                             <div id="progressBar" class="bg-blue-500 h-4 rounded-lg" style="width: 0%;"></div>
                         </div>
 
@@ -155,6 +155,52 @@
 
                     </form>
             </div>
+
+            <script>
+                document.getElementById('uploadForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    // Progress Bar Display Block
+                    document.getElementById('progressBarContainer').style.display = 'block';
+                    document.getElementById('progressBar').style.width = '0%';
+                    document.getElementById('statusText').textContent = 'Yükleme başlıyor...';
+
+                    let formData = new FormData(this);
+
+                    // Ajax File Upload
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('POST', '{{ route('upload.crash') }}', true);
+                    xhr.setRequestHeader('X-CSRF-TOKEN', '{{ csrf_token() }}');
+
+                    // Update Progress Bar Ratio
+                    xhr.upload.onprogress = function (e) {
+                        if(e.lengthComputable) {
+                            let percentComplete = (e.loaded / e.total) * 100;
+                            document.getElementById('progressBar').style.width = percentComplete + '%';
+                            document.getElementById('statusText').textContent = Math.round(percentComplete) + '% yüklendi';
+                        }
+                    };
+
+                    // Complete Upload
+                    xhr.onload = function () {
+                        if(xhr.status === 200) {
+                            document.getElementById('statusText').textContent = 'Yükleme tamamlandı!';
+                        }else {
+                            document.getElementById('statusText').textContent = 'Yükleme başarısız!';
+                        }
+                    };
+
+                    // Error Only
+                    xhr.onerror = function() {
+                        document.getElementById('statusText').textContent = 'Bir hata oluştu!';
+                    };
+
+                    xhr.send(formData);
+
+                });
+            </script>
+
+
 
             <script>
                 const fileInput = document.getElementById('multipleImage');
