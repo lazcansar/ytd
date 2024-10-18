@@ -1,0 +1,25 @@
+{
+    "title": "Kullanım Şartları",
+    "sections": [
+        {
+            "heading": "1. Genel Şartlar",
+            "content": "Bu platformu kullanarak, aşağıdaki şartları kabul etmiş sayılırsınız. Platformda yer alan hizmetlerden yararlanmak için belirli koşulları karşılamanız gerekmektedir."
+        },
+        {
+            "heading": "2. Kullanıcı Yükümlülükleri",
+            "content": "Kullanıcı, platformu kullanırken doğru ve eksiksiz bilgi vermekle yükümlüdür. Yanıltıcı veya eksik bilgi verilmesi, hesabınızın askıya alınmasına neden olabilir."
+        },
+        {
+            "heading": "3. Gizlilik Politikası",
+            "content": "Kullanıcıların kişisel bilgileri, platformumuzun gizlilik politikasına uygun olarak korunacaktır. Bu bilgiler üçüncü şahıslarla paylaşılmayacak ve yalnızca yasal zorunluluklar kapsamında kullanılacaktır."
+        },
+        {
+            "heading": "4. Sorumluluk Reddi",
+            "content": "Platformda yer alan içeriklerin doğruluğu ve güncelliği konusunda herhangi bir garanti vermemekteyiz. Kullanıcılar, platformdaki içerikleri kendi sorumluluğunda kullanır."
+        },
+        {
+            "heading": "5. Değişiklik Hakkı",
+            "content": "Platform kullanım şartlarını istediği zaman değiştirme hakkını saklı tutar. Bu değişiklikler platformda yayınlandığı anda geçerli olacaktır."
+        }
+    ]
+}

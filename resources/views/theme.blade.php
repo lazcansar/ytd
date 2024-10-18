@@ -155,7 +155,7 @@
                     Copyright &copy 2021 - {{ date('Y') }} <a href="#" class="hover:text-white"><span class="font-regular">Yetiş Trafik Danışmanlık</span></a>
                 </div>
                 <div class="block mb-2 font-regular">
-                        <a href="#" class="hover:text-white me-3">Gizlilik Sözleşmesi</a> <a href="#" class="hover:text-white">Kullanım Şartları</a>
+                        <a href="{{ route('privacy') }}" class="hover:text-white me-3">Gizlilik Politikası</a> <a href="{{ route('terms') }}" class="hover:text-white">Kullanım Şartları</a>
                 </div>
             </div>
 

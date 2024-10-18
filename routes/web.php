@@ -14,6 +14,8 @@ Route::get('/hakkimda', [Pages::class, 'aboutPage'])->name('about');
 Route::get('/trafik-kaza-danismanlik-hizmeti', [Pages::class, 'servicesPage'])->name('services');
 Route::get('/trafik-kazasi-danisma', [Pages::class, 'crashPage'])->name('crash');
 Route::get('/ceza-tutanagi-danisma', [Pages::class, 'reportPage'])->name('report');
+Route::get('/kullanim-sartlari', [Pages::class, 'termsPage'])->name('terms');
+Route::get('/gizlilik-politikasi', [Pages::class, 'privacyPage'])->name('privacy');
 Route::get('/giris-yap', [Pages::class, 'loginPage'])->name('login');
 Route::get('/kayit-ol', [Pages::class, 'registerPage'])->name('register');
 

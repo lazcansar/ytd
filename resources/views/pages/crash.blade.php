@@ -134,7 +134,7 @@
                             <div class="w-full mb-4">
                                 <label for="approve" class="font-regular flex items-center">
                                     <input type="checkbox" name="confirmTerm" id="approve" class="me-2" value="1" required>
-                                    <a href="#" class="text-blue-600 me-1 hover:underline">Kullanım Şartlarını</a> okudum, onaylıyorum.
+                                    <a href="{{ route('terms') }}" class="text-blue-600 me-1 hover:underline">Kullanım Şartlarını</a> okudum, onaylıyorum.
                                 </label>
                             </div>
 

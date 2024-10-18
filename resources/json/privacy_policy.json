@@ -1,0 +1,29 @@
+{
+    "title": "Gizlilik Politikası",
+    "sections": [
+        {
+            "heading": "1. Kişisel Verilerin Toplanması",
+            "content": "Platformumuz, kullanıcıların kişisel verilerini toplar. Bu veriler, kullanıcıların rızasıyla toplanır ve yasalara uygun olarak işlenir."
+        },
+        {
+            "heading": "2. Verilerin Kullanımı",
+            "content": "Toplanan veriler, platformun işlevselliğini artırmak ve kullanıcı deneyimini iyileştirmek amacıyla kullanılır. Veriler, kullanıcı onayı olmadan üçüncü taraflarla paylaşılmaz."
+        },
+        {
+            "heading": "3. Çerezler (Cookies)",
+            "content": "Platformumuzda kullanıcıların siteyi nasıl kullandığını analiz etmek için çerezler kullanılır. Çerezler, kullanıcıların bilgisayarında saklanan küçük metin dosyalarıdır ve kullanıcı tercihlerinin hatırlanmasına yardımcı olur."
+        },
+        {
+            "heading": "4. Verilerin Güvenliği",
+            "content": "Kullanıcıların verilerinin güvenliği bizim için önceliklidir. Veriler, en son güvenlik önlemleri ile korunmaktadır. Ancak, internet üzerinden veri iletiminin tamamen güvenli olmadığını unutmamak gerekir."
+        },
+        {
+            "heading": "5. Veri Saklama Süresi",
+            "content": "Kullanıcıların kişisel verileri, yalnızca gerekli olduğu süre boyunca saklanır. Verilerin saklama süresi, yasal gereksinimlere ve iş ihtiyaçlarına bağlıdır."
+        },
+        {
+            "heading": "6. Kullanıcı Hakları",
+            "content": "Kullanıcılar, kişisel verilerinin işlenmesi ile ilgili her zaman bilgi talep edebilir, yanlış verilerin düzeltilmesini veya verilerinin silinmesini isteyebilir."
+        }
+    ]
+}
