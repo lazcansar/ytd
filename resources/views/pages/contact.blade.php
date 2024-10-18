@@ -84,9 +84,9 @@
                                 İletişim Bilgileri
                             </div>
                             <p class="bg-white rounded border border-300 px-4 py-6 mb-5"><a href="mailto:yetisbalci@yahoo.com"><i class="bi bi-envelope text-yellow-700 me-3"></i> yetisbalci@yahoo.com</a></p>
-                            <p class="bg-white rounded border border-300 px-4 py-6 mb-5"><a href=""><i class="bi bi-whatsapp text-yellow-700 me-3"></i> +90 541 556 20 50</a></p>
-                            <p class="bg-white rounded border border-300 px-4 py-6 mb-5"><a href=""><i class="bi bi-facebook text-blue-800 me-3"></i>Yetiş Trafik Danışmanlık</a></p>
-                            <p class="bg-white rounded border border-300 px-4 py-6"><a href=""><i class="bi bi-instagram text-blue-700 me-3"></i>Yetiş Trafik Danışmanlık</a></p>
+                            <p class="bg-white rounded border border-300 px-4 py-6 mb-5"><a href="https://api.whatsapp.com/send?phone=905415562050"><i class="bi bi-whatsapp text-yellow-700 me-3"></i> +90 541 556 20 50</a></p>
+                            <p class="bg-white rounded border border-300 px-4 py-6 mb-5"><a href="https://www.facebook.com/yetistrafik/"><i class="bi bi-facebook text-blue-800 me-3"></i>Yetiş Trafik Danışmanlık</a></p>
+                            <p class="bg-white rounded border border-300 px-4 py-6"><a href="https://www.instagram.com/yetis_trafik_danismanlik/"><i class="bi bi-instagram text-blue-700 me-3"></i>Yetiş Trafik Danışmanlık</a></p>
                         </div>
                     </div>
 

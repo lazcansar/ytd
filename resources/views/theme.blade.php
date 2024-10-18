@@ -135,8 +135,8 @@
                     </div>
                     <div>
                         <ul class="text-gray-200">
-                            <li class="mb-3"><i class="bi bi-envelope-at-fill"></i> <a href="#" class="hover:text-white">yetisbalci@yahoo.com</a></li>
-                            <li class="mb-3"><i class="bi bi-phone-fill"></i> <a href="#" class="hover:text-white">+90 541 556 20 50</a></li>
+                            <li class="mb-3"><i class="bi bi-envelope-at-fill"></i> <a href="mailto:yetisbalci@yahoo.com" class="hover:text-white">yetisbalci@yahoo.com</a></li>
+                            <li class="mb-3"><i class="bi bi-phone-fill"></i> <a href="tel:+90 541 556 20 50" class="hover:text-white">+90 541 556 20 50</a></li>
                             <li><a href="https://www.instagram.com/yetis_trafik_danismanlik/" target="_blank" class="me-3 hover:text-white"><i class="bi bi-instagram"></i> Instagram</a> <a href="https://www.facebook.com/yetistrafik/" target="_blank" class="hover:text-white"><i class="bi bi-facebook"></i> Facebook</a> </li>
                         </ul>
                     </div>
