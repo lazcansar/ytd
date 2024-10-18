@@ -50,6 +50,18 @@ class CrashController extends Controller
         if (!$crashDelete) {
             return response()->json(['success' => false ,'message' => 'Kayıt Bulunamadı.'], 404);
         }
+
+        $images = json_decode($crashDelete->images);
+
+        if (!empty($images)){
+            foreach ($images as $image) {
+                if (Storage::disk('public')->exists($image)) {
+                    Storage::disk('public')->delete($image);
+                }
+            }
+        }
+
+
         $crashDelete->delete();
         return response()->json(['success' => true ,'message' => 'Kayıt başarıyla silindi.']);
     }

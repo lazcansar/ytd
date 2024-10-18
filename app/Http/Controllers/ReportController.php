@@ -49,6 +49,17 @@ class ReportController extends Controller
         if (!$reportDelete) {
             return response()->json(['success' => false ,'message' => 'Kayıt Bulunamadı.'], 404);
         }
+
+        $images = json_decode($reportDelete->images);
+
+        if (!empty($images)){
+            foreach ($images as $image) {
+                if (Storage::disk('public')->exists($image)) {
+                    Storage::disk('public')->delete($image);
+                }
+            }
+        }
+
         $reportDelete->delete();
         return response()->json(['success' => true ,'message' => 'Kayıt başarıyla silindi.']);
     }
