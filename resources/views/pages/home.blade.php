@@ -62,7 +62,8 @@
                 Sistem Nasıl Çalışır?
             </div>
             <div class="block">
-                Trafik kazası yahut trafik cezasına ilişkin rapor tanzim edilebilmesi için sisteme üye olmanız gereklidir. Üyelik işlemlerini tamamlamanızın akabinde ilk olarak tutanaklar sistemimize yüklenir. Daha sonra tarafımızca tutanaklar üzerinde gerekli inceleme işlemleri gerçekleştirilir. Devamında tarafınız ile iletişime geçilerek bilgilendirme yapılır. Rapor düzenleme ve rapor gönderim işlemleri ile süreç tamamlanır.
+                Trafik kazası yahut trafik cezasına ilişkin rapor tanzim edilebilmesi için sisteme tutanakların sisteme yüklenmesi gerekir. Tutanakları sisteme yükleyebilmek için
+                <a class="font-regular text-blue-800" href="{{ route('crash') }}">Trafik Kazası Danışmanlık</a> ve <a class="font-regular text-blue-800" href="{{ route('report') }}">Trafik Cezası Danışmanlık</a> sayfalarını kullanabilirsiniz. Daha sonra tarafımızca tutanaklar üzerinde gerekli inceleme işlemleri gerçekleştirilir. Devamında tarafınız ile iletişime geçilerek bilgilendirme yapılır. Rapor düzenleme ve rapor gönderim işlemleri ile süreç tamamlanır.
             </div>
             <!-- Stage Icons -->
             <div class="flex flex-wrap justify-between items-center mt-6">
